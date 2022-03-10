@@ -2,12 +2,12 @@ import * as React from 'react';
 import CreateTodo from './components/CreateTodo';
 import ListTodos from './components/ListTodos';
 import TitleBar from './components/TitleBar';
-import { Todo } from './models/todo';
+import { ITodo } from './models/todo';
 
 export default function App() {
-  const [todos, setTodos] = React.useState<Todo[]>([]);
+  const [todos, setTodos] = React.useState<ITodo[]>([]);
   
-  function handleCreate(todo: Todo) {
+  function handleCreate(todo: ITodo) {
     todo.id = Date.now();
     setTodos(todos => [...todos, todo]);
   }

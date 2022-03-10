@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { Todo } from '../models/todo';
+import { ITodo } from '../models/todo';
 import TodoCard from './TodoCard';
 
 export interface IListTodosProps {
-  todos: Todo[];
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  todos: ITodo[];
+  setTodos: React.Dispatch<React.SetStateAction<ITodo[]>>;
 }
 
 export default function ListTodos (props: IListTodosProps) {

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Todo } from '../models/todo';
+import { ITodo } from '../models/todo';
 
 export interface ICreateTodoProps {
-  onCreate: (todo: Todo) => void
+  onCreate: (todo: ITodo) => void
 }
 
 export default function CreateTodo (props: ICreateTodoProps) {
@@ -10,7 +10,7 @@ export default function CreateTodo (props: ICreateTodoProps) {
 
   function handleButtonClick() {
     if (name) {
-      const todo: Todo = { name, complete: false };
+      const todo: ITodo = { name, complete: false };
       props.onCreate(todo);
       setName('');
     }

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { GrCheckbox, GrCheckboxSelected, GrTrash } from 'react-icons/gr';
-import { Todo } from '../models/todo';
+import { ITodo } from '../models/todo';
 
 export interface ITodoCardProps {
-  todo: Todo;
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  todo: ITodo;
+  setTodos: React.Dispatch<React.SetStateAction<ITodo[]>>;
 }
 
 export default function TodoCard (props: ITodoCardProps) {
