@@ -5,9 +5,10 @@ import { Todo } from './models/todo';
 
 export default function App() {
   const [todos, setTodos] = React.useState<Todo[]>([]);
-
+  
   function handleCreate(todo: Todo) {
-    setTodos(prevTodos => [...prevTodos, {...todo, id: Date.now()}]);
+    todo.id = Date.now();
+    setTodos(prevTodos => [...prevTodos, todo]);
   }
 
   return (

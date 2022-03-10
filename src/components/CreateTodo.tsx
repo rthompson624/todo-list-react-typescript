@@ -10,7 +10,7 @@ export default function CreateTodo (props: ICreateTodoProps) {
 
   function handleButtonClick() {
     if (name) {
-      const todo: Todo = { name };
+      const todo: Todo = { name, complete: false };
       props.onCreate(todo);
       setName('');
     }
