@@ -8,9 +8,8 @@ export interface IListTodosProps {
 }
 
 export default function ListTodos (props: IListTodosProps) {
+  const todoCards = props.todos.map(todo => <TodoCard key={ todo.id } todo={ todo } setTodos={ props.setTodos } />);
   return (
-    <div className='w-2/5'>
-      { props.todos.map(todo => <TodoCard key={ todo.id } todo={ todo } setTodos={ props.setTodos } />) }
-    </div>
+    <div className='w-2/5'>{ todoCards }</div>
   );
 }
